@@ -36,6 +36,8 @@ public final class Constants {
     //meters, totally fake right now
     public static final double kTrackWidth = 1;
     public static final double kWheelBase = 1;
+    public static final double driveEncoderConversion = 1;
+    public static final double indexerEncoderConversion = 1;
 
     //swerve constants
     public static final SwerveDriveKinematics kDriveKinematics = new SwerveDriveKinematics(

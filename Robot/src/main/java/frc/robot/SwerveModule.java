@@ -37,9 +37,9 @@ public SwerveModule(int driveMotor, int turningMotor, double encoderCPR) {
     m_absoluteEncoder = new CANAnalog(m_turningMotor, AnalogMode.kAbsolute);
 
     //distance driven per pulse
-    m_driveEncoder.setPositionConversionFactor(1);
+    m_driveEncoder.setPositionConversionFactor(Constants.driveEncoderConversion);
     //velocity from pulses
-    m_driveEncoder.setVelocityConversionFactor(1/60.0);
+    m_driveEncoder.setVelocityConversionFactor(Constants.driveEncoderConversion/60.0);
 
 
 
@@ -74,6 +74,7 @@ double currentSteering = m_turningEncoder.getPosition();
 
 double steeringError = Math.IEEEremainder(desiredSteering - currentSteering, Math.PI*2);
 
+//"optimization" (not really)
 if (steeringError > Math.PI / 2) {
     steeringError -= Math.PI;
     desiredDrive *= -1;
