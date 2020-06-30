@@ -55,8 +55,8 @@ public final class Constants {
     public static final double kaVoltSecondsSquaredPerMeter = 1;
     public static final double kMaxSpeedMetersPerSecond = 1;
     public static final double kMaxAccelerationMetersPerSecondSquared = 0;
-	private static final double kMaxAngularSpeedRadiansPerSecond = 0;
-	private static final double kMaxAngularSpeedRadiansPerSecondSquared = 0;
+	public static final double kMaxAngularSpeedRadiansPerSecond = 0;
+	public static final double kMaxAngularSpeedRadiansPerSecondSquared = 0;
     
     public static final TrapezoidProfile.Constraints kThetaControllerConstraints = new TrapezoidProfile.Constraints(
         kMaxAngularSpeedRadiansPerSecond, kMaxAngularSpeedRadiansPerSecondSquared);
