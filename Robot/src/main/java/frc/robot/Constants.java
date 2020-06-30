@@ -36,6 +36,8 @@ public final class Constants {
     //meters, totally fake right now
     public static final double kTrackWidth = 1;
     public static final double kWheelBase = 1;
+    public static final double driveEncoderConversion = 1;
+    public static final double indexerEncoderConversion = 1;
 
     //swerve constants
     public static final SwerveDriveKinematics kDriveKinematics = new SwerveDriveKinematics(
@@ -53,8 +55,8 @@ public final class Constants {
     public static final double kaVoltSecondsSquaredPerMeter = 1;
     public static final double kMaxSpeedMetersPerSecond = 1;
     public static final double kMaxAccelerationMetersPerSecondSquared = 0;
-	private static final double kMaxAngularSpeedRadiansPerSecond = 0;
-	private static final double kMaxAngularSpeedRadiansPerSecondSquared = 0;
+	public static final double kMaxAngularSpeedRadiansPerSecond = 0;
+	public static final double kMaxAngularSpeedRadiansPerSecondSquared = 0;
     
     public static final TrapezoidProfile.Constraints kThetaControllerConstraints = new TrapezoidProfile.Constraints(
         kMaxAngularSpeedRadiansPerSecond, kMaxAngularSpeedRadiansPerSecondSquared);
