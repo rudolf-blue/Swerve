@@ -17,7 +17,7 @@ import edu.wpi.first.wpilibj2.command.Subsystem;
 
 import static edu.wpi.first.wpilibj.util.ErrorMessages.requireNonNullParam;
 
-@SuppressWarnings("MemberName")
+
 public class SwerveControllerCommand extends CommandBase {
   private final Timer m_timer = new Timer();
 
@@ -32,7 +32,6 @@ public class SwerveControllerCommand extends CommandBase {
 
 
 
-  @SuppressWarnings("ParameterName")
   public SwerveControllerCommand(Trajectory trajectory, double targetRotationRadians, Supplier<Pose2d> pose, SwerveDriveKinematics kinematics, PIDController xController, PIDController yController, ProfiledPIDController thetaController, Consumer<SwerveModuleState[]> outputModuleStates, Subsystem... requirements) {
     m_trajectory = requireNonNullParam(trajectory, "trajectory", "SwerveControllerCommand");
     m_targetRotation = targetRotationRadians;
@@ -58,7 +57,6 @@ public class SwerveControllerCommand extends CommandBase {
   }
 
   @Override
-  @SuppressWarnings("LocalVariableName")
   public void execute() {
     double curTime = m_timer.get();
 
