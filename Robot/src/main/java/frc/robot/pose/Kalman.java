@@ -9,10 +9,6 @@ import org.apache.commons.math3.linear.Array2DRowRealMatrix;
 import org.apache.commons.math3.linear.ArrayRealVector;
 import org.apache.commons.math3.linear.RealMatrix;
 import org.apache.commons.math3.linear.RealVector;
-import org.apache.commons.math3.util.MathArrays.Position;
-import org.apache.commons.math3.geometry.euclidean.twod.*;
-import edu.wpi.first.wpilibj.geometry.Pose2d;
-import edu.wpi.first.wpilibj.trajectory.Trajectory.State;
 import frc.robot.pose.State2d;
 
 import frc.robot.Constants;
@@ -155,7 +151,8 @@ public class Kalman {
     }
 
     public State2d estimateState(State2d vision2d, State2d vision3d, State2d IMU, State2d encoderOdometry) {
-    State2d estimation = new State2d();
+    
+        State2d estimation = new State2d();
 
 
 

@@ -66,9 +66,4 @@ public double getXAccel(){
 public double getYAccel(){
     return yAccel;
 }
-
-
-
-
-
 }
